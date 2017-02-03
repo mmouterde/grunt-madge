@@ -35,8 +35,7 @@ module.exports = function (grunt) {
                     });
                     grunt.log.writeln('');
                 });
-
-                grunt.log.warn('Circular dependencies found.');
+                grunt.fail.warn('Circular dependencies found.');
                 done({message: 'Circular dependencies found.'});
             } else {
                 // print a success message
